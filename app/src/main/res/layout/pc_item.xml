@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/pc_name"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="Mario"

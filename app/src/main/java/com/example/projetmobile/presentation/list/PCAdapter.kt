@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetmobile.R
 
-class PCAdapter(private var dataSet: List<String>) :
+class PCAdapter(private var dataSet: List<PC>) :
     RecyclerView.Adapter<PCAdapter.ViewHolder>() {
 
     /**
@@ -23,7 +23,7 @@ class PCAdapter(private var dataSet: List<String>) :
         }
     }
 
-    fun updateList(list: List<String>){
+    fun updateList(list: List<PC>){
         dataSet = list
         notifyDataSetChanged()
     }
@@ -42,7 +42,8 @@ class PCAdapter(private var dataSet: List<String>) :
 
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        viewHolder.textView.text = dataSet[position]
+        val pc = dataSet[position]
+        viewHolder.textView.text = pc.name
     }
 
     // Return the size of your dataset (invoked by the layout manager)

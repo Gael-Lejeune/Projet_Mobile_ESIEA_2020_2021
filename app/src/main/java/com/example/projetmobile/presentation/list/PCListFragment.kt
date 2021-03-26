@@ -27,19 +27,19 @@ class PCListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        recyclerView = view.findViewById(R.id.pc_recyclerview)
+         recyclerView = view.findViewById(R.id.pc_recyclerview)
 
         recyclerView.apply {
             layoutManager = this@PCListFragment.layoutManager
             adapter = this@PCListFragment.adapter
         }
 
-        val pclist = arrayListOf<String>().apply {
-            add("Mario")
-            add("Donkey Kong")
-            add("Link")
-            add("Samus")
-            add("Dark Samus")
+        val pclist = arrayListOf<PC>().apply {
+            add(PC("Mario"))
+            add(PC("Donkey Kong"))
+            add(PC("Link"))
+            add(PC("Samus"))
+            add(PC("Dark Samus"))
         }
 
         adapter.updateList(pclist)
