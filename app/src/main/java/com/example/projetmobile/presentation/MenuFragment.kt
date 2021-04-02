@@ -31,15 +31,9 @@ class MenuFragment : Fragment() {
 
         val button = view.findViewById<Button>(R.id.button_list)
         button.setOnClickListener {
-            navigateToListFragment()
+            (activity as MainActivity).navigateToListFragment()
         }
 
     }
 
-    fun navigateToListFragment () {
-        childFragmentManager.beginTransaction()
-            .replace(R.id.container, PCListFragment(), "")
-            .addToBackStack(null)
-            .commit()
-    }
 }

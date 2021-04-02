@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projetmobile.MainActivity
 import com.example.projetmobile.R
+import com.example.projetmobile.presentation.ApiConnector
 import com.example.projetmobile.presentation.api.PCApi
-import com.example.projetmobile.presentation.api.PCResponse
+import com.example.projetmobile.presentation.detail.PCDetailFragment
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -20,6 +22,7 @@ class PCListFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private val adapter = PCAdapter(listOf(), ::navigateToPCDetailFragment)
+
     private val layoutManager = LinearLayoutManager(context)
 
     override fun onCreateView(
@@ -36,40 +39,31 @@ class PCListFragment : Fragment() {
          recyclerView = view.findViewById(R.id.pc_recyclerview)
 
         recyclerView.apply {
-            layoutManager = this@PCListFragment.layoutManager
+            layoutManager = LinearLayoutManager(context)
             adapter = this@PCListFragment.adapter
         }
 
-        val retrofit: Retrofit = Retrofit.Builder()
-                .baseUrl("https://pokeapi.co/api/v2/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
 
-        val pcApi: PCApi = retrofit.create(PCApi::class.java)
 
-        pcApi.getPCList().enqueue(object: Callback<PCResponse>{
-            override fun onResponse(call: Call<PCResponse>, response: Response<PCResponse>) {
+        ApiConnector.pcApi.getPCList().enqueue(object: Callback<List<PC>>{
+            override fun onResponse(call: Call<List<PC>>, response: Response<List<PC>>) {
                 if (response.isSuccessful){
                     val pcResponse = response.body()
                     if (pcResponse != null) {
-                        adapter.updateList(pcResponse.results)
+                        adapter.updateList(pcResponse)
                     }
                 }
             }
 
-            override fun onFailure(call: Call<PCResponse>, t: Throwable) {
+            override fun onFailure(call: Call<List<PC>>, t: Throwable) {
                 TODO("Not yet implemented")
             }
 
         })
 
     }
-
     private fun navigateToPCDetailFragment(pc: PC) {
-        childFragmentManager.beginTransaction()
-            .replace(R.id.container, PCDetailFragment(), "")
-            .addToBackStack(null)
-            .commit()
+        (activity as MainActivity).navigateToPCDetailFragment(pc)
     }
 
 }
