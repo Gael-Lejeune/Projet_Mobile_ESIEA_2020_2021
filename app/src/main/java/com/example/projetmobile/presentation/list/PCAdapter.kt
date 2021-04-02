@@ -3,12 +3,13 @@ package com.example.projetmobile.presentation.list
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextClock
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetmobile.R
 
-class PCAdapter(private var dataSet: List<PC>) :
-    RecyclerView.Adapter<PCAdapter.ViewHolder>() {
+class PCAdapter(private var dataSet: List<PC>,var listener: ((PC) -> Unit)? = null
+) :RecyclerView.Adapter<PCAdapter.ViewHolder>() {
 
     /**
      * Provide a reference to the type of views that you are using
@@ -44,6 +45,9 @@ class PCAdapter(private var dataSet: List<PC>) :
         // contents of the view with that element
         val pc = dataSet[position]
         viewHolder.textView.text = pc.name
+        viewHolder.itemView.setOnClickListener{
+            listener?.invoke(pc)
+        }
     }
 
     // Return the size of your dataset (invoked by the layout manager)
