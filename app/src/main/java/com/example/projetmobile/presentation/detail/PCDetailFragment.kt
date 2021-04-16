@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.example.projetmobile.R
 import com.example.projetmobile.presentation.ApiConnector
 import com.example.projetmobile.presentation.list.PC
+import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Response
 
@@ -27,7 +28,9 @@ class PCDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         textViewName = view.findViewById(R.id.pc_detail_name)
-        callApi()
+        val jsonPC = arguments?.getString(KEY_JSON)
+        val pc = Gson().fromJson(jsonPC, PC::class.java)
+        textViewName.text = pc.name
     }
 
     private fun callApi() {
@@ -42,6 +45,10 @@ class PCDetailFragment : Fragment() {
 
             }
         })
+    }
+
+    companion object {
+        const val KEY_JSON = "KEY_NAME"
     }
 
 }

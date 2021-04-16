@@ -1,5 +1,6 @@
 package com.example.projetmobile.presentation.list
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 data class PC(
