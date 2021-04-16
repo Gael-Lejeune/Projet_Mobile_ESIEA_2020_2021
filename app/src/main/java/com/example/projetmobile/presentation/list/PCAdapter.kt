@@ -3,9 +3,10 @@ package com.example.projetmobile.presentation.list
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextClock
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.projetmobile.R
 
 class PCAdapter(private var dataSet: List<PC>,var listener: ((PC) -> Unit)? = null
@@ -17,10 +18,12 @@ class PCAdapter(private var dataSet: List<PC>,var listener: ((PC) -> Unit)? = nu
      */
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView
+        val imageView: ImageView
 
         init {
             // Define click listener for the ViewHolder's View.
             textView = view.findViewById(R.id.pc_name)
+            imageView = view.findViewById(R.id.pc_image)
         }
     }
 
@@ -48,6 +51,12 @@ class PCAdapter(private var dataSet: List<PC>,var listener: ((PC) -> Unit)? = nu
         viewHolder.itemView.setOnClickListener{
             listener?.invoke(pc)
         }
+
+        Glide
+            .with(viewHolder.itemView.context)
+            .load(pc.thumb)
+            .centerCrop()
+            .into(viewHolder.imageView)
     }
 
     // Return the size of your dataset (invoked by the layout manager)

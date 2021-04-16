@@ -48,7 +48,7 @@ class PCDetailFragment : Fragment() {
     }
 
     companion object {
-        const val KEY_JSON = "KEY_NAME"
+        const val KEY_JSON = "KEY_JSON"
     }
 
 }
