@@ -2,4 +2,5 @@
     <string name="app_name">ProjetMobile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_generic">Unable to fetch data. Check your connection and try again. :(</string>
 </resources>

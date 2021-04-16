@@ -43,7 +43,6 @@ class PCAdapter(private var dataSet: List<PC>,var listener: ((PC) -> Unit)? = nu
 
     // Replace the contents of a view (invoked by the layout manager)
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
         val pc = dataSet[position]
