@@ -29,11 +29,13 @@ class MenuFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val button = view.findViewById<Button>(R.id.button_list)
-        button.setOnClickListener {
+        val listButton = view.findViewById<Button>(R.id.button_list)
+        listButton.setOnClickListener {
             (activity as MainActivity).navigateToListFragment()
         }
-
+        val aboutButton = view.findViewById<Button>(R.id.button_about)
+        aboutButton.setOnClickListener {
+            (activity as MainActivity).navigateToAboutFragment()
+        }
     }
-
 }

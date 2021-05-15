@@ -11,4 +11,7 @@ interface PCApi {
 
     @GET("characters/name/{name}")
     fun getPCDetails(@Path("name") name: String): Call<PC>
+
+    @GET("characters/name/{name}/moves?game=ultimate")
+    fun getPCDetails(): Call<List<String>>
 }

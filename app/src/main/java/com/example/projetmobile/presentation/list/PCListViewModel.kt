@@ -33,8 +33,6 @@ class PCListViewModel: ViewModel() {
             override fun onFailure(call: Call<List<PC>>, t: Throwable) {
                 pcList.value = PCError
             }
-
         })
     }
-
 }

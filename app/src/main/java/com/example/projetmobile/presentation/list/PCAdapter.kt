@@ -46,10 +46,13 @@ class PCAdapter(private var dataSet: List<PC>,var listener: ((PC) -> Unit)? = nu
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
         val pc = dataSet[position]
+        //println(pc)
+        //pc.moves = dataSet[position]
         viewHolder.textView.text = pc.name
         viewHolder.itemView.setOnClickListener{
             listener?.invoke(pc)
         }
+
 
         Glide
             .with(viewHolder.itemView.context)

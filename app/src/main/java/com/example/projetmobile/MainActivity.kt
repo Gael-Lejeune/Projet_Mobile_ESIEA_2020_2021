@@ -3,6 +3,7 @@ package com.example.projetmobile
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.os.bundleOf
+import com.example.projetmobile.presentation.AboutFragment
 import com.example.projetmobile.presentation.MenuFragment
 import com.example.projetmobile.presentation.detail.PCDetailFragment
 import com.example.projetmobile.presentation.detail.PCDetailFragment.Companion.KEY_JSON
@@ -23,6 +24,13 @@ class MainActivity : AppCompatActivity() {
     fun navigateToListFragment () {
         supportFragmentManager.beginTransaction()
             .replace(R.id.container, PCListFragment(), "")
+            .addToBackStack(null)
+            .commit()
+    }
+
+    fun navigateToAboutFragment () {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.container, AboutFragment(), "")
             .addToBackStack(null)
             .commit()
     }
