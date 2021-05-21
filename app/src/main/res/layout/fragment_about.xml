@@ -27,7 +27,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Cette application est un projet étudiant. :)"/>
+        android:text="@string/desription"/>
 
     <Button
         android:id="@+id/button_menu"
@@ -39,6 +39,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
-        android:text="Return to menu" />
+        android:text="@string/back_to_menu_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

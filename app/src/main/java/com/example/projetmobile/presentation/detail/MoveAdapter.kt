@@ -1,4 +1,4 @@
-package com.example.projetmobile.presentation.list
+package com.example.projetmobile.presentation.detail
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,25 +9,27 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.projetmobile.R
 
-class PCAdapter(private var dataSet: List<PC>,var listener: ((PC) -> Unit)? = null
-) :RecyclerView.Adapter<PCAdapter.ViewHolder>() {
+class MoveAdapter(private var dataSet: List<Move>) :RecyclerView.Adapter<MoveAdapter.ViewHolder>() {
 
     /**
      * Provide a reference to the type of views that you are using
      * (custom ViewHolder).
      */
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val textView: TextView
-        val imageView: ImageView
+        val nameTextView: TextView
+        val typeTextView: TextView
+        val damageTextView: TextView
 
         init {
             // Define click listener for the ViewHolder's View.
-            textView = view.findViewById(R.id.pc_name)
-            imageView = view.findViewById(R.id.pc_image)
+            nameTextView = view.findViewById(R.id.move_name)
+            typeTextView = view.findViewById(R.id.move_type)
+            damageTextView = view.findViewById(R.id.move_damage)
+
         }
     }
 
-    fun updateList(list: List<PC>){
+    fun updateList(list: List<Move>){
         dataSet = list
         notifyDataSetChanged()
     }
@@ -36,7 +38,7 @@ class PCAdapter(private var dataSet: List<PC>,var listener: ((PC) -> Unit)? = nu
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         // Create a new view, which defines the UI of the list item
         val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.pc_item, viewGroup, false)
+            .inflate(R.layout.move_item, viewGroup, false)
 
         return ViewHolder(view)
     }
@@ -45,20 +47,13 @@ class PCAdapter(private var dataSet: List<PC>,var listener: ((PC) -> Unit)? = nu
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        val pc = dataSet[position]
+        val move = dataSet[position]
         //println(pc)
         //pc.moves = dataSet[position]
-        viewHolder.textView.text = pc.displayName
-        viewHolder.itemView.setOnClickListener{
-            listener?.invoke(pc)
-        }
+        viewHolder.nameTextView.text = move.name
+        viewHolder.typeTextView.text = move.moveType
+        viewHolder.damageTextView.text = move.damage
 
-
-        Glide
-            .with(viewHolder.itemView.context)
-            .load(pc.thumb)
-            .centerCrop()
-            .into(viewHolder.imageView)
     }
 
     // Return the size of your dataset (invoked by the layout manager)

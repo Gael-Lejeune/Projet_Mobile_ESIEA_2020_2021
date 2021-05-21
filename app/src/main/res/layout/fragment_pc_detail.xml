@@ -8,6 +8,19 @@
     android:background="@color/cardview_dark_background"
     >
 
+    <TextView
+        android:id="@+id/pc_detail_name"
+        android:textColor="@color/black"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mario"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/pc_detail_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
     <ImageView
         android:id="@+id/pc_detail_image"
         android:layout_width="match_parent"
@@ -15,16 +28,7 @@
         app:layout_constraintTop_toBottomOf="@id/pc_detail_name"
         app:layout_constraintBottom_toTopOf="@id/pc_moves"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <TextView
-        android:id="@+id/pc_detail_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/pc_detail_image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button_list"
@@ -36,7 +40,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
-        android:text="Return to list" />
+        android:text="@string/back_to_list_button" />
+
+    <ProgressBar
+        android:id="@+id/move_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/pc_moves"
+        app:layout_constraintBottom_toBottomOf="@id/pc_moves"
+        app:layout_constraintEnd_toEndOf="@id/pc_moves"
+        app:layout_constraintStart_toStartOf="@id/pc_moves"/>
+
+    <TextView
+        android:id="@+id/move_error_text"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Unable to fetch move data"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="@id/pc_moves"
+        app:layout_constraintBottom_toBottomOf="@id/pc_moves"
+        app:layout_constraintEnd_toEndOf="@id/pc_moves"
+        app:layout_constraintStart_toStartOf="@id/pc_moves"/>
 
     <Button
         android:id="@+id/pc_notif"
@@ -44,17 +69,17 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:backgroundTint="@color/black"
-        android:text="Display a notification :)"
+        android:text="@string/notification_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/pc_moves"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/pc_detail_image"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
