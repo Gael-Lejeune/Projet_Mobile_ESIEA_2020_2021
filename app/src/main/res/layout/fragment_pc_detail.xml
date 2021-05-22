@@ -5,12 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_dark_background"
     >
 
     <TextView
         android:id="@+id/pc_detail_name"
-        android:textColor="@color/black"
         android:layout_marginTop="70dp"
         android:layout_marginBottom="50dp"
         android:layout_width="wrap_content"
@@ -34,8 +32,6 @@
         android:id="@+id/button_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"
@@ -62,16 +58,6 @@
         app:layout_constraintBottom_toBottomOf="@id/pc_moves"
         app:layout_constraintEnd_toEndOf="@id/pc_moves"
         app:layout_constraintStart_toStartOf="@id/pc_moves"/>
-
-    <Button
-        android:id="@+id/pc_notif"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/black"
-        android:text="@string/notification_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/pc_moves"
