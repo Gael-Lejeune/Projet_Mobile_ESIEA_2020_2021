@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        sharedPreferences = getDefaultSharedPreferences(this) // 0 - for private mode
+        sharedPreferences = getDefaultSharedPreferences(this)
         editor = sharedPreferences.edit()
         itheme = sharedPreferences.getInt("theme", 1)
         println(itheme)
