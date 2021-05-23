@@ -72,5 +72,6 @@ Une icon d'option clickable est disponible en haut à droite, dans toute l'appli
 Il est possible de changer le thème de l'application (sombre ou clair) via le menu d'option.
 ### SharedPreferences
 La thème sélectionné est enregistré dans le cache grâce à l'utilisation de SharedPreferences dans l'application.
-![Settings](
-ScreenCaptures/lightMainActivityFR.png)``
+
+![Settings](ScreenCaptures/lightMainActivityFR.png)
+![Settings](ScreenCaptures/MainActivityFR.png)
