@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Mon API Smash</string>
     <string name="error_generic">Impossible de récupérer les données. Verifiez votre connexion et ressayez encore. :(</string>
-    <string name="desription">Cette application est un projet étudiant. :)</string>
+    <string name="desription">Cette application est un projet étudiant réalisé au cours de la première année du cyle ingénieur à l\'ESIEA Paris. Elle a été developpée par Gaël Lejeune :)</string>
     <string name="back_to_menu_button">Retour au menu</string>
     <string name="api_button">Liste des personnages de Super Smash Bros</string>
     <string name="about">A propos</string>

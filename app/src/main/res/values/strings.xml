@@ -2,7 +2,7 @@
     <string name="app_name">My Smash API</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="error_generic">Unable to fetch data. Check your connection and try again. :(</string>
-    <string name="desription">This app is a student project. :)</string>
+    <string name="desription">This app is a student project made during the first year of the ingeeniring cycle in ESIEA Paris. It was made by Gaël Lejeune. :)</string>
     <string name="back_to_menu_button">Return to menu</string>
     <string name="api_button">Super Smash Bros Playable Character List</string>
     <string name="about">About</string>
