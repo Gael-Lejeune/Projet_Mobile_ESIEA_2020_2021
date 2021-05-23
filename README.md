@@ -2,7 +2,9 @@
 
 ## Fonctionnalités demandées
 Ce projet est un projet fait dans le cadre du module de programmation Android de la première année du cycle ingénieur de l'ESIEA.
-![App Logo](https://raw.githubusercontent.com/Gael-Lejeune/Projet_Mobile_ESIEA_2020_2021/master/app/src/main/res/drawable/smashlogo.png)
+
+![App Logo](app/src/main/res/drawable/smashlogo.png)
+
 Le projet est sensé présenter les caractéristiques suivantes :
 - Ecran avec une liste d'éléments.
 - Ecran avec le détail d'un élément
@@ -13,11 +15,13 @@ Le projet est sensé présenter les caractéristiques suivantes :
 L'application contient une liste de personnages jouables récupérées grâce à un appel API Rest à l'API https://api.kuroganehammer.com/swagger/index.html.
 Celle-ci est scrollable.
 
-![Liste](https://raw.githubusercontent.com/Gael-Lejeune/Projet_Mobile_ESIEA_2020_2021/master/ScreenCaptures/ListFR.png)
-### Ecran avec détails
-Lors du clic sur l'un des éléments (personnage), la page de détail est affichée. 
+![Liste](ScreenCaptures/ListFR.png)
 
-![Liste](https://raw.githubusercontent.com/Gael-Lejeune/Projet_Mobile_ESIEA_2020_2021/master/ScreenCaptures/PCFR.png)
+### Ecran avec détails
+Lors du clic sur l'un des éléments (personnage), la page de détail est affichée.
+
+![Liste](ScreenCaptures/PCFR.png)
+
 #### Informations
 Toutes les informations du personnage, ainsi que la couleur de fond du fragment sont affichés dynamiquement en fonction du personnage sélectionné.
 
@@ -46,12 +50,22 @@ Deux méthodes sont utilisés afin de stocker des informations en cache.
 Cette section détail les fonctionnalités et usage ajoutés par rapport au projet de base.
 ### Logo et nom de l'application personnalisés
 Le logo et le nom ed l'application ont été modifiés.
+
+![MenuFR](ScreenCaptures/MenuFR.png)
+
 ### Traduction
 Chaque message ou chaine de caratères affichée est dynamiquement traduite en français si c'est la langue principale du téléphone. Pour toutes les autres langues, le texte est en anglais.
+
+![MenuFR](ScreenCaptures/AboutFR.png)
+![MenuFR](ScreenCaptures/AboutEN.png)
+
 ### Patterne MVVM
 Le patterne MVVM est utilisé pour les fragment de liste et de détail de personnage
 ### Deuxième appel à l'API
 Un deuxième appel à l'API plus spécifique est fait avec un passage d'argument afin de récupérer la liste de mouvements d'un personnage.
+
+![MenuFR](ScreenCaptures/PCFR.png)
+
 ### Options en haut à droite
 Une icon d'option clickable est disponible en haut à droite, dans toute l'application.
 ### Theme
@@ -59,4 +73,4 @@ Il est possible de changer le thème de l'application (sombre ou clair) via le m
 ### SharedPreferences
 La thème sélectionné est enregistré dans le cache grâce à l'utilisation de SharedPreferences dans l'application.
 ![Settings](
-https://raw.githubusercontent.com/Gael-Lejeune/Projet_Mobile_ESIEA_2020_2021/master/ScreenCaptures/lightMainActivityFR.png)``
+ScreenCaptures/lightMainActivityFR.png)``
