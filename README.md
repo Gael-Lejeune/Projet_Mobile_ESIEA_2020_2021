@@ -75,3 +75,8 @@ La thème sélectionné est enregistré dans le cache grâce à l'utilisation de
 
 ![Settings](ScreenCaptures/lightMainActivityFR.png)
 ![Settings](ScreenCaptures/MainActivityFR.png)
+
+# UNE COURTE VIDEO DE PRESENTATION EST DISPONIBLE AU LIEN SUIVANT
+https://youtu.be/e-aFTwjrQxg
+
+Elle démontre le fonctionnement de l'application et l'utilisation de toutes ses fonctionnalités.
