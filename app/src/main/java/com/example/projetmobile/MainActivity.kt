@@ -46,7 +46,6 @@ class MainActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.theme_dark -> {
                 Toast.makeText(this, "Dark theme selected", Toast.LENGTH_SHORT).show()
-                //setTheme(R.style.Dark)
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 editor.putInt("theme", AppCompatDelegate.MODE_NIGHT_YES)
                 editor.commit()
@@ -55,15 +54,10 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.theme_light -> {
                 Toast.makeText(this, "Light theme selected", Toast.LENGTH_SHORT).show()
-                //setTheme(R.style.Light)
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                 editor.putInt("theme", AppCompatDelegate.MODE_NIGHT_NO)
                 editor.commit()
 
-                true
-            }
-            R.id.language -> {
-                Toast.makeText(this, "Language selected", Toast.LENGTH_SHORT).show()
                 true
             }
             else -> super.onOptionsItemSelected(item)

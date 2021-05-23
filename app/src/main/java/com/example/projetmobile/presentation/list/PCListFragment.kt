@@ -31,9 +31,6 @@ class PCListFragment : Fragment() {
     private lateinit var error: TextView
 
     private val adapter = PCAdapter(listOf(), ::navigateToPCDetailFragment)
-
-    private val layoutManager = LinearLayoutManager(context)
-
     private lateinit var viewModel: PCListViewModel
 
 

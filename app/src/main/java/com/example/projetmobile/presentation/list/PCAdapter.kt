@@ -12,16 +12,11 @@ import com.example.projetmobile.R
 class PCAdapter(private var dataSet: List<PC>,var listener: ((PC) -> Unit)? = null
 ) :RecyclerView.Adapter<PCAdapter.ViewHolder>() {
 
-    /**
-     * Provide a reference to the type of views that you are using
-     * (custom ViewHolder).
-     */
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView
         val imageView: ImageView
 
         init {
-            // Define click listener for the ViewHolder's View.
             textView = view.findViewById(R.id.pc_name)
             imageView = view.findViewById(R.id.pc_image)
         }
@@ -46,8 +41,6 @@ class PCAdapter(private var dataSet: List<PC>,var listener: ((PC) -> Unit)? = nu
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
         val pc = dataSet[position]
-        //println(pc)
-        //pc.moves = dataSet[position]
         viewHolder.textView.text = pc.displayName
         viewHolder.itemView.setOnClickListener{
             listener?.invoke(pc)

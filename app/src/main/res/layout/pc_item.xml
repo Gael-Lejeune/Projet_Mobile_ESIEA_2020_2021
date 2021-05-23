@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/pc_name"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:contentDescription="NPC thumbnail" />
+        android:contentDescription="@string/thumbnail_description" />
 
     <TextView
         android:id="@+id/pc_name"

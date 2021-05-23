@@ -11,10 +11,6 @@ import com.example.projetmobile.R
 
 class MoveAdapter(private var dataSet: List<Move>) :RecyclerView.Adapter<MoveAdapter.ViewHolder>() {
 
-    /**
-     * Provide a reference to the type of views that you are using
-     * (custom ViewHolder).
-     */
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val nameTextView: TextView
         val typeTextView: TextView
@@ -48,8 +44,6 @@ class MoveAdapter(private var dataSet: List<Move>) :RecyclerView.Adapter<MoveAda
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
         val move = dataSet[position]
-        //println(pc)
-        //pc.moves = dataSet[position]
         viewHolder.nameTextView.text = move.name
         viewHolder.typeTextView.text = move.moveType
         viewHolder.damageTextView.text = move.damage

@@ -25,10 +25,8 @@ import com.google.gson.Gson
 class PCDetailFragment : Fragment() {
 
     private lateinit var textViewName: TextView
-    private lateinit var textViewMoves: TextView
     private lateinit var pcImage: ImageView
     private lateinit var backButton: Button
-    private lateinit var notifButton: Button
     private lateinit var recyclerView: RecyclerView
 
     private val adapter = MoveAdapter(listOf())
@@ -41,7 +39,6 @@ class PCDetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-       //viewModel = ViewModelProvider(this).get(com.example.projetmobile.presentation.detail.PCDetailsViewModel::class.java)
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_pc_detail, container, false)
     }
@@ -77,9 +74,7 @@ class PCDetailFragment : Fragment() {
             }
         })
 
-
         textViewName = view.findViewById(R.id.pc_detail_name)
-        //textViewMoves = view.findViewById(R.id.pc_moves)
         pcImage = view.findViewById(R.id.pc_detail_image)
         view.setBackgroundColor(Color.parseColor(pc.colorTheme))
         textViewName.text = pc.displayName
@@ -95,15 +90,6 @@ class PCDetailFragment : Fragment() {
         backButton.setOnClickListener {
             activity?.onBackPressed()
         }
-
-        /*viewModel.moveList.observe(viewLifecycleOwner, Observer { moveModel ->
-            loader.isVisible = moveModel is MoveLoader
-            error.isVisible = moveModel is MoveError
-            if (pcModel is MoveSuccess){
-
-            }
-        })*/
-
     }
 
     companion object {

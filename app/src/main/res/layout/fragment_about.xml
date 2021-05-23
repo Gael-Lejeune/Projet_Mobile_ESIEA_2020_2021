@@ -14,7 +14,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/smashlogo" />
+        app:srcCompat="@drawable/smashlogo"
+        android:contentDescription="@string/logo_description" />
 
     <TextView
         android:id="@+id/about_text"

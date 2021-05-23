@@ -8,4 +8,12 @@
     <string name="about">A propos</string>
     <string name="back_to_list_button">Retour à la liste</string>
     <string name="notification_button">Afficher une notification</string>
+    <string name="notification">Notification</string>
+    <string name="light">Clair</string>
+    <string name="dark">Sombre</string>
+    <string name="theme">Thème</string>
+    <string name="settings">Options</string>
+    <string name="thumbnail_description">Miniature du personnage</string>
+    <string name="move_error">Impossible de récupérer les données de mouvement. Verifiez votre connexion et ressayez encore. :(</string>
+    <string name="logo_description">Logo de l\'application</string>
 </resources>

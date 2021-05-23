@@ -52,7 +52,7 @@
         android:textColor="@color/white"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Unable to fetch move data"
+        android:text="@string/move_error"
         android:textAlignment="center"
         app:layout_constraintTop_toTopOf="@id/pc_moves"
         app:layout_constraintBottom_toBottomOf="@id/pc_moves"
