@@ -6,16 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ProgressBar
-import android.widget.TextView
-import androidx.core.view.isVisible
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.projetmobile.MainActivity
 import com.example.projetmobile.R
-import com.example.projetmobile.presentation.list.*
 
 class AboutFragment : Fragment() {
 

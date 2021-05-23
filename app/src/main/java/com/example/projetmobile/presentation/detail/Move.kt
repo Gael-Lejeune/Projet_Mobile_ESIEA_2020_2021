@@ -1,6 +1,5 @@
 package com.example.projetmobile.presentation.detail
 
-import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 data class Move(

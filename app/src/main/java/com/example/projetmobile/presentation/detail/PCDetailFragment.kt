@@ -18,7 +18,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.projetmobile.R
 import com.example.projetmobile.presentation.list.PC
-import com.example.projetmobile.presentation.list.PCAdapter
 import com.google.gson.Gson
 
 

@@ -1,6 +1,5 @@
 package com.example.projetmobile.presentation.list
 
-import android.os.Parcelable
 import com.example.projetmobile.presentation.detail.Move
 import com.google.gson.annotations.SerializedName
 
@@ -12,5 +11,4 @@ data class PC(
     @SerializedName("ColorTheme") val colorTheme: String,
     @SerializedName("Game") val game: String,
     @SerializedName("Moves") var moves: List<Move>
-//val movementsURL: String
 )

@@ -1,6 +1,5 @@
 package com.example.projetmobile.presentation.list
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.projetmobile.presentation.ApiConnector

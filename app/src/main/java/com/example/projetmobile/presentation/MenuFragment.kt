@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.projetmobile.MainActivity
 import com.example.projetmobile.R
 import com.example.projetmobile.presentation.list.PCAdapter
-import com.example.projetmobile.presentation.list.PCListFragment
 
 class MenuFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView

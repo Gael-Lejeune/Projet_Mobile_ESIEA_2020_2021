@@ -9,20 +9,11 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetmobile.MainActivity
 import com.example.projetmobile.R
-import com.example.projetmobile.presentation.ApiConnector
-import com.example.projetmobile.presentation.api.PCApi
-import com.example.projetmobile.presentation.detail.PCDetailFragment
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class PCListFragment : Fragment() {
 

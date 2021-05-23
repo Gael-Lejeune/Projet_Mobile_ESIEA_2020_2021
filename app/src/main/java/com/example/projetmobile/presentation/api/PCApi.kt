@@ -5,7 +5,6 @@ import com.example.projetmobile.presentation.list.PC
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
-import retrofit2.http.Query
 
 interface PCApi {
     //Get all Smash Bros Playable Characters
